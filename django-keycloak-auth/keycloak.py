@@ -122,7 +122,7 @@ class KeycloakConnect:
         }
         headers = {
             "content-type": "application/x-www-form-urlencoded",
-            "authorization": "Bearer " + token,
+            "authorization": token,
         }
         response = requests.request(
             "POST", self.token_introspection_endpoint, data=payload, headers=headers
